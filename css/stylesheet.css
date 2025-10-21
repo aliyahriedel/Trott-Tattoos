@@ -393,6 +393,7 @@ button {
   .nav-menu {
     flex-direction: column;
     padding: 0;
+    width: 100vw;
   }
   .nav-menu li {
     flex: none;
