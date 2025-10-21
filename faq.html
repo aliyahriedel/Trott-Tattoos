@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial scale=1"/>
+    <title>Trott Tattoos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+
+<body>
+    <header> 
+       <h1 class="logo">Trott Tattoos</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>General Questions</h2>
+        <section class="faq">
+            <button type="button" class="collapsible">Q: How do I book an appointment?</button>
+            <div class="content">
+                <p>A: Fill out the booking form on the contact page. Be specific about your idea, size, 
+                placement, and reference images if you have any. We&#39;ll hit you back with availability.</p>
+            </div>
+            <button type="button" class="collapsible">Q: Do you take walk-ins?</button>
+            <div class="content">
+                <p>A: Yes I do! Call ahead of time and I will try my best to get you in.</p>
+            </div>
+            <button type="button" class="collapsible">Q: How much will my tattoo cost?</button>
+            <div class="content">
+                <p>A: It depends on size, detail, and placement. Minimum is $100,
+                and I&#39;ll give you a quote once I know what you&#39;re thinking.</p>
+            </div>
+        </section>
+        <h2>Prep & Aftercare</h2>
+        <section class="faq">
+            <button type="button" class="collapsible">Q: What should I do before my appointment?</button>
+            <div class="content">
+                <p>A: Eat a solid meal, be sober, and moisturize the area. Don&#39;t come in hungover or high, it won&#39;t make 
+                you cooler and your skin won&#39;t cooperate.
+                </p>
+            </div>
+            <button type="button" class="collapsible">Q: How do I take care of my tattoo?</button>
+            <div class="content">
+                <p>A: You&#39;ll get full aftercare instructions, but in short: <br>
+                - Wash gently with fragrance-free soap <br>
+                - Moisturize with unscented lotion <br>
+                - No picking, peeling, or soaking <br>
+                - No gym, sun, or pool for at least 2 weeks <br>
+                It&#39;s a wound, treat it like one.
+                </p>
+            </div>
+            <button type="button" class="collapsible">Q: What if it scabs or gets itchy?</button>
+            <div class="content">
+                <p>A: That&#39;s normal. Don&#39;t scratch. Pat it if it&#39;s itchy. If something 
+                looks weird-weird, send a photo and I&#39;ll tell you if it&#39;s chill or not.
+             </p>
+            </div>
+        </section>
+        <h2>Tough Questions</h2>
+        <section class="faq">
+            <button type="button" class="collapsible">Q: Does it hurt?</button>
+            <div class="content">
+                <p>A: Yes. But like... it&#39;s manageable. If you&#39;re scared, tell me and I&#39;ll walk
+                 you through it.
+                </p>
+            </div>
+            <button type="button" class="collapsible">Q: Can I use numbing cream?</button>
+            <div class="content">
+                <p>A: Let me know ahead of time. Some are fine, some mess with the skin. 
+                We&#39;ll figure it out together.
+                </p>
+            </div>
+            <button type="button" class="collapsible">Q: Will you tattoo hands, face, or neck?</button>
+            <div class="content">
+                <p>A: Only if you already have visible work or I know you&#39;re not gonna regret it.
+                 No 18-year-old face tats. Sorry not sorry.
+             </p>
+            </div>
+        </section>
+        <section class="faq">
+            <h2>Policies</h2>
+            <button type="button" class="collapsible">Q: What&#39;s your reschedule/cancellation policy?</button>
+            <div class="content">
+                <p>A: 48 hours notice to reschedule. Deposit is non-refundable if you ghost. Life happens, 
+                just communicate.
+                </p>
+            </div>
+            <button type="button" class="collapsible">Q: Can I bring a friend?</button>
+            <div class="content">
+                <p>A: One chill friend is fine. No entourage. No kids.</p>
+            </div>
+            <button type="button" class="collapsible">Q: What if I change my mind about the design?</button>
+            <div class="content">
+                <p>A: Let me know before we start stenciling. Last-minute changes = last-minute stress. 
+                I want you to love it, just don&#39;t pull a full 180 the day of.
+                </p>
+            </div>
+        </section>
+        
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i; 
+
+            for (i = 0; i <coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null; 
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                    });
+                }
+        </script>
+    </main>
+     <footer>
+        <p>&copy; 2025 Vincent Trott 
+            <a href="https://www.instagram.com/trott.tattoos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61571518176495" class="fa fa-facebook"></a> Site by A. Riedel</p>
+    </footer>
+</body>
+
+</html>

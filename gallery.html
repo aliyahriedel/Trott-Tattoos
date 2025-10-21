@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial scale=1"/>
+    <title>Trott Tattoos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+   
+<body>
+    <header> 
+       <h1 class="logo">Trott Tattoos</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="gallery-section">
+        <h2>Tattoos</h2>
+        <div class="gallery">
+            <img src="images/IMG_2107.jpeg" onclick="openModal();currentSlide(1)" alt="Tattoo 1">
+            <img src="images/IMG_2188.jpeg" onclick="openModal();currentSlide(2)" alt="Tattoo 2">
+            <img src="images/IMG_1039.jpeg" onclick="openModal();currentSlide(4)" alt="Tattoo 3">
+            <img src="images/IMG_1023.jpeg" onclick="openModal();currentSlide(5)" alt="Tattoo 4">
+        </div>
+    </section>
+
+    <!-- Paintings/Drawings Section -->
+    <section class="gallery-section">
+        <h2>Paintings & Drawings</h2>
+        <div class="gallery">
+            <img src="images/IMG_1841.jpeg" onclick="openModal();currentSlide(3)" alt="Art 1">
+            <img src="images/6E8AC214-9D93-4692-A81D-561FEC30D1B8.jpeg" onclick="openModal();currentSlide(6)" alt="Art 2">
+            <img src="images/5E9A1BE5-1951-4580-B7D6-39CB0E3052B1.jpeg" onclick="openModal();currentSlide(7)" alt="Art 3">
+            <img src="images/07273F0A-38F8-4AB1-BFB7-FC3314039F15.jpeg" onclick="openModal();currentSlide(8)" alt="Art 4">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides"><img src="images/IMG_2107.jpeg"></div>
+            <div class="mySlides"><img src="images/IMG_2188.jpeg"></div>
+            <div class="mySlides"><img src="images/IMG_1039.jpeg"></div>
+            <div class="mySlides"><img src="images/IMG_1023.jpeg"></div>
+            <div class="mySlides"><img src="images/IMG_1841.jpeg"></div>
+            <div class="mySlides"><img src="images/6E8AC214-9D93-4692-A81D-561FEC30D1B8.jpeg"></div>
+            <div class="mySlides"><img src="images/5E9A1BE5-1951-4580-B7D6-39CB0E3052B1.jpeg"></div>
+            <div class="mySlides"><img src="images/07273F0A-38F8-4AB1-BFB7-FC3314039F15.jpeg"></div>
+
+            <!-- Navigation -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    </main>
+     <footer>
+        <p>&copy; 2025 Vincent Trott 
+            <a href="https://www.instagram.com/trott.tattoos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61571518176495" class="fa fa-facebook"></a> Site by A. Riedel</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+
+        function openModal() { document.getElementById("myModal").style.display = "block"; }
+        function closeModal() { document.getElementById("myModal").style.display = "none"; }
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
+
+        function showSlides(n) {
+        const slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+        slides[slideIndex-1].style.display = "block"; }
+
+    </script>
+</body>
+</html>
