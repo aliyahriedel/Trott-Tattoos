@@ -387,3 +387,54 @@ button {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav-menu li {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* gallery adjust */
+.column {
+  width: 25%; /* default desktop */
+  padding: 5px;
+}
+
+@media (max-width: 1024px) {
+  .column {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    width: 100%;
+  }
+}
+/* home adjust */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero button {
+  width: auto;
+  max-width: 90%;
+}
+/* footer adjust */
+footer p {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
